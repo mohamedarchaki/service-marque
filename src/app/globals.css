@@ -1,0 +1,466 @@
+
+@import "tailwindcss";
+
+/* =========================================
+   01. FONTS
+========================================= */
+
+@font-face {
+  font-family: "Alexandria";
+  src: url("/font-family/Alexandria-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Amiri";
+  src: url("/font-family/Amiri-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Amiri";
+  src: url("/font-family/Amiri-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBMPlexSansArabic";
+  src: url("/font-family/IBMPlexSansArabic-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBMPlexSansArabic";
+  src: url("/font-family/IBMPlexSansArabic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBMPlexSansArabic";
+  src: url("/font-family/IBMPlexSansArabic-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================
+   02. DESIGN TOKENS
+========================================= */
+
+:root {
+  --background: #F5F0E6;
+  --foreground: #29251F;
+
+  --primary: #142C27;
+  --primary-hover: #1D4037;
+
+  --secondary: #E9DFC9;
+  --accent: #A66D48;
+  --accent-hover: #895738;
+
+  --muted: #B6A68A;
+  --border: #DED4C1;
+
+  --white: #FFFFFF;
+  --black: #171A18;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --shadow-soft: 0 8px 30px rgba(20, 44, 39, 0.06);
+  --shadow-card: 0 15px 45px rgba(20, 44, 39, 0.08);
+}
+
+/* =========================================
+   03. TAILWIND V4 THEME
+========================================= */
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --color-ivory: #F5F0E6;
+  --color-forest: #142C27;
+  --color-copper: #A66D48;
+  --color-sand: #B6A68A;
+  --color-walnut: #29251F;
+
+  /* Fonts */
+  --font-sans: "IBMPlexSansArabic", sans-serif;
+  --font-arabic: "IBMPlexSansArabic", sans-serif;
+  --font-display: "Amiri", serif;
+  --font-heading: "Alexandria", sans-serif;
+}
+
+/* =========================================
+   04. GLOBAL STYLES
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "IBMPlexSansArabic", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--background);
+}
+
+/* =========================================
+   05. TYPOGRAPHY
+========================================= */
+
+.font-arabic {
+  font-family: "IBMPlexSansArabic", sans-serif;
+}
+
+.font-display {
+  font-family: "Amiri", serif;
+}
+
+.font-heading {
+  font-family: "Alexandria", sans-serif;
+}
+
+.heading-display {
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.heading-modern {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.text-body {
+  font-family: "IBMPlexSansArabic", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.text-muted {
+  color: #817865;
+}
+
+/* =========================================
+   06. BUTTONS
+========================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border-radius: var(--radius-sm);
+  font-family: "Alexandria", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--background);
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-secondary {
+  background: var(--accent);
+  color: white;
+  border: 1px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--background);
+}
+
+.btn-light {
+  background: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--background);
+}
+
+.btn-light:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--secondary);
+}
+
+/* =========================================
+   07. CARDS
+========================================= */
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--muted);
+}
+
+.card-dark {
+  background: var(--primary);
+  color: var(--background);
+  border: 1px solid rgba(245, 240, 230, 0.12);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.card-ivory {
+  background: var(--secondary);
+  color: var(--foreground);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.card-elevated {
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(20, 44, 39, 0.1);
+  padding: 32px;
+}
+
+/* =========================================
+   08. BADGES
+========================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background: var(--primary);
+  color: var(--background);
+}
+
+.badge-accent {
+  background: #F0E1D4;
+  color: var(--accent);
+}
+
+.badge-muted {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+/* =========================================
+   09. INPUTS
+========================================= */
+
+.input-luxury {
+  width: 100%;
+  padding: 14px 18px;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--foreground);
+  font-family: "IBMPlexSansArabic", sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-luxury::placeholder {
+  color: #A69B88;
+}
+
+.input-luxury:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(20, 44, 39, 0.08);
+}
+
+/* =========================================
+   10. LAYOUT & SECTIONS
+========================================= */
+
+.container-luxury {
+  width: min(100% - 48px, 1280px);
+  margin-inline: auto;
+}
+
+.section-padding {
+  padding-block: 100px;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent);
+  font-family: "Alexandria", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.section-label::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* =========================================
+   11. DECORATIVE ELEMENTS
+========================================= */
+
+.divider-luxury {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+.border-luxury {
+  border: 1px solid var(--border);
+}
+
+.bg-luxury {
+  background: var(--background);
+}
+
+.bg-forest {
+  background: var(--primary);
+}
+
+.bg-parchment {
+  background: var(--secondary);
+}
+
+/* =========================================
+   12. SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* =========================================
+   13. RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-block: 64px;
+  }
+
+  .container-luxury {
+    width: min(100% - 32px, 1280px);
+  }
+
+  .card,
+  .card-dark,
+  .card-ivory {
+    padding: 20px;
+  }
+}

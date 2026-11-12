@@ -1,0 +1,73 @@
+export const PACKAGES_DATA = {
+  id: "packages",
+  badge: "باقات خدمات الإنابة الشاملة",
+  title: "أسعار شاملة لرسوم الإيداع الرسمية، دون أي مصاريف خفية",
+  subtitle:
+    "جميع الأسعار تشمل رسوم وكالتنا بالإضافة للرسوم الإدارية القانونية للمكتب المغربي للملكية الصناعية والتجارية (OMPIC). نحن نتكفل بدفع كل شيء نيابة عنك.",
+  plans: [
+    {
+      id: "starter",
+      audience: "للمقاول الذاتي والمشاريع الناشئة",
+      name: "باقة البداية (Starter)",
+      description:
+        "تتكفل بحجز وحماية الاسم التجاري للشركة فقط (دون الرمز أو الشعار الملون).",
+      price: "1490",
+      currency: "درهم",
+      priceNote: "شامل الرسوم والضرائب والـ OMPIC",
+      featured: false,
+      features: [
+        { label: "فحص أولي لمدى توفر وتطابق الاسم", included: true },
+        { label: "حماية وتوثيق الاسم التجاري فقط", included: true },
+        { label: "إدراج في فئة واحدة (Classe) لدى OMPIC", included: true },
+        { label: "صياغة، مراجعة وإيداع رسمي كامل نيابة عنك", included: true },
+        { label: "إرسال شهادة الإيداع عبر البريد لباب منزلك", included: true },
+        { label: "تسجيل الهوية البصرية أو الشعار", included: false },
+      ],
+      cta: "تكليف الوكالة بالباقة المبتدئة",
+      href: "#protect-now",
+    },
+    {
+      id: "business",
+      popularBadge: "الباقة الأكثر طلباً للشركات والمقاولات",
+      audience: "حماية شاملة للهوية",
+      name: "باقة الأعمال (Business)",
+      description:
+        "تسجيل وحماية الاسم التجاري والشعار البصري للشركة لحماية متكاملة ثنائية القوة.",
+      price: "2490",
+      currency: "درهم",
+      priceNote: "شامل الرسوم والضرائب والـ OMPIC",
+      featured: true,
+      features: [
+        { label: "تحليل أسبقية لفظي وبصري معمق لمنع الرفض", included: true },
+        { label: "حماية الاسم التجاري + اللوغو / الشعار", included: true },
+        { label: "إدراج في ما يصل إلى 3 فئات مختلفة", included: true },
+        { label: "صياغة، إيداع رسمي ومتابعة تامة لدى OMPIC", included: true },
+        { label: "صياغة مذكرة إثبات الأسبقية والحق", included: true },
+        { label: "تسليم شهادة الإيداع لباب مقاولتكم", included: true },
+      ],
+      cta: "تكليف الوكالة بباقة الأعمال",
+      href: "#protect-now",
+    },
+    {
+      id: "premium",
+      audience: "الحماية والرقابة القصوى",
+      name: "باقة التميز (Premium)",
+      description:
+        "تسجيل كامل مع مراقبة نشطة وحماية استباقية ضد أي محاولة لتقليد اسمك بالمستقبل.",
+      price: "3990",
+      currency: "درهم",
+      priceNote: "شامل الرسوم والضرائب والـ OMPIC",
+      featured: false,
+      features: [
+        { label: "بحث شامل عن الأسبقية (لفظي، بصري وصوتي)", included: true },
+        { label: "حماية الاسم التجاري + الشعار / الرمز", included: true },
+        { label: "إدراج في ما يصل إلى 3 فئات مختلفة", included: true },
+        { label: "أولوية المعالجة والإيداع لدى OMPIC في 24 ساعة", included: true },
+        { label: "خدمة المراقبة النشطة للعلامة (12 شهراً)", included: true },
+        { label: "إشعار واعتراض فوري عند محاولة تسجيل أسماء مشابهة", included: true },
+      ],
+      cta: "تكليف الوكالة بباقة التميز",
+      href: "#protect-now",
+    },
+  ],
+};
