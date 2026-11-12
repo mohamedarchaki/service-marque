@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
-import { SlidersHorizontal, ArrowLeft } from "lucide-react";
+import { SlidersHorizontal, ArrowLeft, X } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -128,7 +128,6 @@ export default function Header() {
             className="xl:hidden relative z-50 flex items-center gap-3 rounded-full border border-border bg-white px-4 py-2.5 text-forest shadow-[var(--shadow-soft)] transition-all duration-300 hover:border-copper/60"
           >
             <span className="font-heading text-xs font-medium tracking-wide">
-              {menuOpen ? "إغلاق" : "القائمة"}
             </span>
             <div className="flex h-4 w-5 flex-col items-end justify-center gap-[5px]">
               <span className="block h-[1.5px] w-full rounded-full bg-forest" />
@@ -159,8 +158,7 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className="flex items-center gap-3 rounded-full border border-ivory/25 bg-ivory/10 px-4 py-2 text-ivory transition-colors hover:bg-ivory/20"
               >
-                <span className="font-heading text-xs font-medium">إغلاق</span>
-                <span className="text-copper text-sm leading-none">✕</span>
+                <X className="text-copper text-sm leading-none"></X>
               </button>
             </div>
 
