@@ -51,13 +51,7 @@ export default function HeroSection() {
               <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
             </Link>
 
-            <Link
-              href={hero.cta.secondary.href}
-              className="btn btn-outline !px-6 !py-4 !text-sm w-full sm:w-auto justify-center"
-            >
-              <Search className="h-4 w-4 text-copper" />
-              <span>{hero.cta.secondary.label}</span>
-            </Link>
+            
           </div>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6 w-full">

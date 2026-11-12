@@ -176,12 +176,6 @@ export default function FaqPage() {
                   <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
                 </Link>
 
-                <Link
-                  href={cta.secondaryHref}
-                  className="btn border border-ivory/25 text-ivory hover:bg-ivory/10 !px-7 !py-3.5"
-                >
-                  {cta.secondaryLabel}
-                </Link>
               </div>
             </div>
           </div>
