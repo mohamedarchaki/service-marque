@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <section
       dir="rtl"
-      className="relative overflow-hidden bg-ivory pt-14 pb-20 lg:pt-24 lg:pb-28"
+      className="relative overflow-hidden bg-ivory pt-4 pb-8 lg:pt-3 lg:pb-14"
     >
       <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-copper/5 blur-3xl" />
 

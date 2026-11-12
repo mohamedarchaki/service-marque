@@ -35,7 +35,7 @@ export default function WhyProtectSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="card bg-white"
+                className="card bg-white/50!"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-[var(--radius-md)] bg-ivory border border-border text-copper">
                   <Icon className="h-5 w-5" />

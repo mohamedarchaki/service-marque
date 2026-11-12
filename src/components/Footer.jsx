@@ -128,13 +128,6 @@ export default function Footer() {
               </Link>
             ))}
 
-            <Link
-              href={FOOTER_DATA.bottom.agencyPortal.href}
-              className="inline-flex items-center gap-1.5 rounded-[var(--radius-sm)] border border-copper/50 bg-copper/10 px-3 py-1.5 font-heading text-[11px] font-medium text-copper transition-colors hover:bg-copper hover:text-white"
-            >
-              <ShieldCheck className="h-3.5 w-3.5" />
-              <span>{FOOTER_DATA.bottom.agencyPortal.label}</span>
-            </Link>
           </div>
         </div>
       </div>

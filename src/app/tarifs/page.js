@@ -13,7 +13,7 @@ import { TARIFS_PAGE_DATA } from "@/data/tarifs";
 import PageBanner from "@/components/PageBanner";
 
 // Bdel had numero b numero WhatsApp dyal l-wakala (bla + w bla sfar)
-const AGENCY_WHATSAPP = "212600000000";
+const AGENCY_WHATSAPP = "212671790556";
 
 export default function TarifsPage() {
   const { hero, plans, comparisonRows, sectors } = TARIFS_PAGE_DATA;

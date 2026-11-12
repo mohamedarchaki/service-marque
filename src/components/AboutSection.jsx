@@ -12,9 +12,9 @@ export default function AboutSection() {
     <section
       id={about.id}
       dir="rtl"
-      className="section-padding bg-parchment/45 border-y border-border"
+      className="section-padding bg-white/50 border-y border-border"
     >
-      <div className="container-luxury grid items-center gap-12 lg:grid-cols-12">
+      <div className="container-luxury grid items-start gap-12 lg:grid-cols-12">
         {/* Image Column */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function AboutSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-8">
             {about.highlights.map((item, idx) => (
-              <div key={idx} className="card !p-5 bg-white">
+              <div key={idx} className="card p-5! bg-white/50!">
                 <div className="flex items-center gap-2.5 mb-2">
                   <CheckCircle2 className="h-4 w-4 text-copper shrink-0" />
                   <h3 className="font-heading text-sm font-semibold text-forest">
