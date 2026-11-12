@@ -9,7 +9,7 @@ export default function PackagesSection() {
   const { packages } = HOME_DATA;
 
   return (
-    <section id={packages.id} dir="rtl" className="section-padding bg-ivory">
+    <section id={packages.id} dir="rtl" className="section-padding bg-white/50">
       <div className="container-luxury">
         <div className="mx-auto max-w-2xl text-center mb-14">
           <span className="badge badge-accent border border-copper/20 mb-4 px-4 py-1.5 font-heading text-xs text-forest">

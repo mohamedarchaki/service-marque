@@ -12,7 +12,7 @@ export default function StepsSection() {
     <section
       id={steps.id}
       dir="rtl"
-      className="section-padding bg-white/50 border-y border-border"
+      className="section-padding  bg-parchment/40 border-y border-border"
     >
       <div className="container-luxury">
         <div className="mx-auto max-w-2xl text-center mb-14">

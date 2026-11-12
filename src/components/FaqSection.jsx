@@ -14,7 +14,7 @@ export default function FaqSection() {
     <section
       id={faq.id}
       dir="rtl"
-      className="section-padding bg-white/50 border-t border-border"
+      className="section-padding bg-parchment/40 border-t border-border"
     >
       <div className="container-luxury max-w-3xl">
         <div className="text-center mb-12">

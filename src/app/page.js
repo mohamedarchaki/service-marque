@@ -7,6 +7,7 @@ import StepsSection from "@/components/StepsSection";
 import PackagesSection from "@/components/PackagesSection";
 import FaqSection from "@/components/FaqSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MarquesSection from "@/components/MarquesSection";
 
 export default function HomePage() {
 
@@ -18,6 +19,7 @@ export default function HomePage() {
      <HeroSection/>
      <AboutSection/>
      <WhyProtectSection/>
+     <MarquesSection/>
      <StepsSection/>
      <PackagesSection/>
      <FaqSection/>
