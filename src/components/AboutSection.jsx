@@ -1,105 +1,78 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
-import { Users, FileCheck, Check } from "lucide-react";
-import { ABOUT_DATA } from "@/data/about";
+import { CheckCircle2, ArrowLeft } from "lucide-react";
+import { HOME_DATA } from "@/data/home";
 
 export default function AboutSection() {
+  const { about } = HOME_DATA;
+
   return (
     <section
-      id={ABOUT_DATA.id}
+      id={about.id}
       dir="rtl"
       className="section-padding bg-parchment/45 border-y border-border"
     >
-      <div className="container-luxury grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-        {/* Right Column: Editorial Copy & Highlights */}
+      <div className="container-luxury grid items-center gap-12 lg:grid-cols-12">
+        {/* Image Column */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-6 flex flex-col items-start"
+          transition={{ duration: 0.6 }}
+          className="lg:col-span-5 order-2 lg:order-1"
         >
-          <span className="badge badge-accent border border-copper/20 mb-5 px-4 py-1.5 font-heading text-xs text-forest">
-            {ABOUT_DATA.badge}
-          </span>
-
-          <h2 className="heading-display text-3xl sm:text-4xl text-forest leading-[1.35] mb-6">
-            {ABOUT_DATA.title}
-          </h2>
-
-          <div className="space-y-4 mb-8">
-            {ABOUT_DATA.paragraphs.map((text, idx) => (
-              <p
-                key={idx}
-                className="text-body text-[15px] sm:text-base text-walnut/85"
-              >
-                {text}
-              </p>
-            ))}
-          </div>
-
-          {/* Two Highlight Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-            {ABOUT_DATA.highlights.map((item, idx) => {
-              const Icon = idx === 0 ? Users : FileCheck;
-              return (
-                <div
-                  key={item.id}
-                  className="card p-5! flex items-start gap-3.5 bg-white/30!"
-                >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-ivory border border-border text-copper">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-sm font-semibold text-forest mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="font-arabic text-xs text-muted leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="relative rounded-[var(--radius-xl)] overflow-hidden border border-border shadow-[var(--shadow-card)] aspect-[4/4.3] bg-forest">
+            <img
+              src={about.image}
+              alt={about.title}
+              className="h-full w-full object-cover opacity-85"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-transparent" />
           </div>
         </motion.div>
 
-        {/* Left Column: Agency Services Luxury Card */}
+        {/* Copy Column */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.65, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-6"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="lg:col-span-7 order-1 lg:order-2 flex flex-col items-start"
         >
-          <div className="card-dark relative overflow-hidden !p-7 sm:!p-9 rounded-[var(--radius-xl)] shadow-[var(--shadow-card)]">
-            {/* Subtle Copper Glow */}
-            <div className="pointer-events-none absolute -top-20 -left-20 h-56 w-56 rounded-full bg-copper/15 blur-3xl" />
+          <span className="badge badge-accent border border-copper/20 mb-4 px-4 py-1.5 font-heading text-xs text-forest">
+            {about.badge}
+          </span>
 
-            <h3 className="font-display text-2xl sm:text-[26px] font-bold text-ivory mb-7 relative z-10">
-              {ABOUT_DATA.agencyCard.title}
-            </h3>
+          <h2 className="heading-display text-3xl sm:text-4xl text-forest leading-[1.35] mb-5">
+            {about.title}
+          </h2>
 
-            <ul className="space-y-5 relative z-10">
-              {ABOUT_DATA.agencyCard.items.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-3.5 border-b border-ivory/10 pb-5 last:border-none last:pb-0"
-                >
-                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-copper/20 text-copper">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <p className="font-arabic text-sm leading-relaxed text-ivory/85">
-                    <strong className="font-heading font-semibold text-ivory ml-1">
-                      {item.title}
-                    </strong>
-                    {item.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
+          <p className="text-body text-base text-walnut/80 mb-8 max-w-2xl">
+            {about.description}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-8">
+            {about.highlights.map((item, idx) => (
+              <div key={idx} className="card !p-5 bg-white">
+                <div className="flex items-center gap-2.5 mb-2">
+                  <CheckCircle2 className="h-4 w-4 text-copper shrink-0" />
+                  <h3 className="font-heading text-sm font-semibold text-forest">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="font-arabic text-xs text-muted leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
+
+          <Link href={about.cta.href} className="btn btn-outline group">
+            <span>{about.cta.label}</span>
+            <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
+          </Link>
         </motion.div>
       </div>
     </section>

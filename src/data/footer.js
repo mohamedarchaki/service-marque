@@ -8,11 +8,11 @@ export const FOOTER_DATA = {
   quickLinks: {
     title: "روابط سريعة",
     items: [
-      { label: "فحص توفر الاسم التجاري", href: "#priority-check" },
-      { label: "مهام الإنابة والتوكيل", href: "#about" },
-      { label: "باقات وعروض التسجيل", href: "#packages" },
-      { label: "طريقة المعالجة والخطوات", href: "#steps" },
-      { label: "الأسئلة الشائعة والإجابات", href: "#faq" },
+  { label: "الرئيسية", href: "/" },
+  { label: "خدمات الإنابة", href: "/services" },
+  { label: "مراحل التسجيل", href: "/processus" },
+  { label: "الباقات والأسعار", href: "/tarifs" },
+  { label: "الأسئلة الشائعة", href: "/faq" },
     ],
   },
   partners: {

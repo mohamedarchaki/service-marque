@@ -1,0 +1,85 @@
+export const TARIFS_PAGE_DATA = {
+  hero: {
+    badge: "تسعيرة شفافة وشاملة لرسوم OMPIC",
+    title: "باقات مصممة لحماية هويتك التجارية بأعلى معايير الأمان",
+    subtitle:
+      "جميع الأسعار نهائية وتشمل أتعاب الوكالة بالإضافة إلى الرسوم الإدارية والضريبية للمكتب المغربي للملكية الصناعية والتجارية (OMPIC).",
+  },
+  plans: [
+    {
+      id: "starter",
+      audience: "للمقاول الذاتي والمشاريع الناشئة",
+      name: "باقة البداية",
+      enName: "Starter",
+      price: "1490",
+      description:
+        "حجز وحماية الاسم التجاري للشركة فقط (علامة لفظية بدون شعار بصري).",
+      featured: false,
+      features: [
+        { label: "فحص أولي لمدى توفر وتطابق الاسم", included: true },
+        { label: "حماية وتوثيق الاسم التجاري فقط", included: true },
+        { label: "إدراج في فئة واحدة (Classe) لدى OMPIC", included: true },
+        { label: "صياغة، مراجعة وإيداع رسمي كامل نيابة عنك", included: true },
+        { label: "إرسال وصل الإيداع وشهادة الحماية لعنوانك", included: true },
+        { label: "تسجيل الهوية البصرية أو الشعار (Logo)", included: false },
+        { label: "خدمة المراقبة النشطة والاعتراض الاستباقي", included: false },
+      ],
+    },
+    {
+      id: "business",
+      popularBadge: "الأكثر طلباً للشركات والمقاولات",
+      audience: "حماية شاملة للهوية",
+      name: "باقة الأعمال",
+      enName: "Business",
+      price: "2490",
+      description:
+        "تسجيل وحماية الاسم التجاري والشعار البصري للشركة لحماية متكاملة ثنائية القوة.",
+      featured: true,
+      features: [
+        { label: "تحليل أسبقية لفظي وبصري معمق لمنع الرفض", included: true },
+        { label: "حماية الاسم التجاري + الشعار البصري (Logo)", included: true },
+        { label: "إدراج في ما يصل إلى 3 فئات مختلفة", included: true },
+        { label: "صياغة، إيداع رسمي ومتابعة تامة لدى OMPIC", included: true },
+        { label: "صياغة مذكرة إثبات الأسبقية والحق", included: true },
+        { label: "تسليم شهادة الإيداع لباب مقاولتكم", included: true },
+        { label: "خدمة المراقبة النشطة والاعتراض الاستباقي", included: false },
+      ],
+    },
+    {
+      id: "premium",
+      audience: "الحماية والرقابة القصوى",
+      name: "باقة التميز",
+      enName: "Premium",
+      price: "3990",
+      description:
+        "تسجيل كامل مع معالجة مستعجلة ومراقبة نشطة ضد أي محاولة تقليد في المستقبل.",
+      featured: false,
+      features: [
+        { label: "بحث شامل عن الأسبقية (لفظي، بصري وصوتي)", included: true },
+        { label: "حماية الاسم التجاري + الشعار / الرمز", included: true },
+        { label: "إدراج في ما يصل إلى 3 فئات مختلفة", included: true },
+        { label: "أولوية المعالجة والإيداع لدى OMPIC في 24 ساعة", included: true },
+        { label: "خدمة المراقبة النشطة للعلامة (12 شهراً)", included: true },
+        { label: "إشعار واعتراض فوري عند محاولة تسجيل أسماء مشابهة", included: true },
+        { label: "استشارة قانونية مفتوحة طوال مدة الحماية", included: true },
+      ],
+    },
+  ],
+  comparisonRows: [
+    { feature: "الرسوم الإدارية والضريبية لـ OMPIC", starter: "مشمولة", business: "مشمولة", premium: "مشمولة" },
+    { feature: "عدد الفئات (Classes de Nice)", starter: "فئة واحدة", business: "حتى 3 فئات", premium: "حتى 3 فئات" },
+    { feature: "حماية الاسم التجاري (Marque Verbale)", starter: true, business: true, premium: true },
+    { feature: "حماية الشعار البصري (Logo / Figurative)", starter: false, business: true, premium: true },
+    { feature: "مدة الإيداع الرسمي لدى OMPIC", starter: "48 ساعة", business: "48 ساعة", premium: "أولوية 24 ساعة" },
+    { feature: "الرد القانوني على الاعتراضات", starter: "مشمول", business: "مشمول", premium: "مشمول + أولوية" },
+    { feature: "المراقبة النشطة للسجلات (12 شهراً)", starter: false, business: false, premium: true },
+  ],
+  sectors: [
+    "التجارة الإلكترونية والتسويق (فئة 35)",
+    "الحلول الرقمية والبرمجيات (فئات 35، 38، 42)",
+    "المطاعم، المقاهي والصناعات الغذائية (فئات 29، 30، 43)",
+    "الأزياء، الملابس ومستحضرات التجميل (فئات 03، 18، 25)",
+    "العقار، البناء والاستشارات (فئات 36، 37، 41)",
+    "قطاع آخر (تحديد مخصص من طرف المستشار)",
+  ],
+};
