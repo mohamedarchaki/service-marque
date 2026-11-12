@@ -16,7 +16,7 @@ export default function TermsPage() {
         title={terms.title}
         subtitle={terms.subtitle}
         currentPage="الشروط والأحكام"
-        bgImage="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=85"
+        bgImage="/images/PageBanner.jpg"
       />
 
       <section className="section-padding">

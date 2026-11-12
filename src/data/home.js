@@ -18,7 +18,7 @@ export const HOME_DATA = {
       { id: 3, label: "شهادة OMPIC لباب منزلك" },
     ],
     visual: {
-      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=85",
+      image: "/images/hero.avif",
       badge: "حماية رسمية 10 سنوات",
       certificateTitle: "شهادة تسجيل علامة تجارية",
       authority: "المكتب المغربي للملكية الصناعية والتجارية — OMPIC",
@@ -36,7 +36,7 @@ export const HOME_DATA = {
     title: "خبراء سيرفيس مارك ينوبون عنك في كل خطوة",
     description:
       "أكثر من 30% من الطلبات الفردية تُرفض بسبب أخطاء التصنيف. مستشارونا القانونيون يتولون صياغة الملف، دفع الرسوم، والدفاع عن علامتك.",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85",
+    image: "/images/about.avif",
     highlights: [
       { title: "تحديد فئات نيس بدقة", desc: "حماية شاملة لقطاع نشاطك التجاري." },
       { title: "تمثيل قانوني كامل", desc: "إيداع رسمي ومتابعة فترة النشر (3 أشهر)." },

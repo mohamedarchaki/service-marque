@@ -36,7 +36,7 @@ export default function FaqPage() {
         title={hero.title}
         subtitle={hero.subtitle}
         currentPage="الأسئلة الشائعة"
-        bgImage="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=85"
+        bgImage="/images/PageBanner.jpg"
       />
 
       {/* 02. Search & Category Filter + Accordion */}

@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         title={privacy.title}
         subtitle={privacy.subtitle}
         currentPage="سياسة الخصوصية"
-        bgImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=85"
+        bgImage="/images/PageBanner.jpg"
       />
 
       <section className="section-padding">

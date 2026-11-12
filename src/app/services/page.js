@@ -37,7 +37,7 @@ export default function ServicesPage() {
         title={hero.title}
         subtitle={hero.subtitle}
         currentPage="خدمات الإنابة"
-        bgImage="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=85"
+        bgImage="/images/PageBanner.jpg"
       />
 
       {/* 02. Editorial Split Section: 4 Core Service Pillars */}
@@ -65,7 +65,7 @@ export default function ServicesPage() {
               {/* Editorial Luxury Image Frame */}
               <div className="relative rounded-[var(--radius-lg)] overflow-hidden border border-border shadow-[var(--shadow-card)] aspect-[16/10] bg-forest">
                 <img
-                  src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=85"
+                  src="/images/about.avif"
                   alt="التمثيل القانوني المعتمد"
                   className="h-full w-full object-cover opacity-80 mix-blend-luminosity"
                 />
@@ -289,7 +289,7 @@ export default function ServicesPage() {
         <div className="container-luxury">
           <div className="relative overflow-hidden rounded-[var(--radius-xl)] bg-forest p-10 sm:p-16 text-center text-ivory shadow-[var(--shadow-card)] border border-ivory/10">
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
+              src="/images/services.avif"
               alt="Service Marque Cabinet"
               className="absolute inset-0 h-full w-full object-cover opacity-15 mix-blend-luminosity"
             />

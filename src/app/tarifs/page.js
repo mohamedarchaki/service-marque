@@ -63,7 +63,7 @@ export default function TarifsPage() {
         title={hero.title}
         subtitle={hero.subtitle}
         currentPage="الباقات والأسعار"
-        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85"
+        bgImage="/images/PageBanner.jpg"
       />
 
       {/* 02. 3 Luxury Pricing Cards */}

@@ -25,7 +25,7 @@ export default function ProcessusPage() {
         title={hero.title}
         subtitle={hero.subtitle}
         currentPage="مراحل التسجيل"
-        bgImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=85"
+        bgImage="/images/PageBanner.jpg"
       />
 
       {/* 02. Luxury Vertical Timeline */}
