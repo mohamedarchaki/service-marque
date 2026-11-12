@@ -6,7 +6,6 @@ import WhyProtectSection from "@/components/WhyProtectSection";
 import StepsSection from "@/components/StepsSection";
 import PackagesSection from "@/components/PackagesSection";
 import FaqSection from "@/components/FaqSection";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import MarquesSection from "@/components/MarquesSection";
 
 export default function HomePage() {
@@ -15,7 +14,6 @@ export default function HomePage() {
   return (
     <main>
       {/* NAVBAR */}
-      <WhatsAppButton/>
      <HeroSection/>
      <AboutSection/>
      <WhyProtectSection/>

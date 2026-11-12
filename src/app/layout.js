@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
 
 export const metadata = {
   title: "ServiceMarque | وكالة متخصصة في بناء وتطوير العلامات التجارية",
@@ -12,6 +14,8 @@ export default function RootLayout({ children }) {
     <html lang="ar" dir="rtl">
 
       <body className="relative">
+        
+      <WhatsAppButton/>
         <Header/>
         {children}
         <Footer/>
