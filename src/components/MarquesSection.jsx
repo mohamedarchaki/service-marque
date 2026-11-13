@@ -12,7 +12,7 @@ export default function MarquesSection() {
   return (
     <section
       dir="rtl"
-      className="section-padding bg-parchment/40 border-y border-border"
+      className="section-padding bg-white/30 border-y border-border"
     >
       <div className="container-luxury">
         {/* Header */}
