@@ -28,7 +28,7 @@ export default function WhatsAppButton() {
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
       style={{ marginBottom: "env(safe-area-inset-bottom, 0px)" }}
-      className={`fixed left-5 z-[80] h-14 w-14 ${
+      className={`fixed left-5 z-30 h-14 w-14 ${
         surReservation ? "bottom-28 md:bottom-5" : "bottom-5"
       }`}
     >
