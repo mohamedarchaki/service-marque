@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Clock, PhoneCall, MapPin, ShieldCheck } from "lucide-react";
 import { FOOTER_DATA } from "@/data/footer";
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -15,35 +16,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-ivory/10">
           {/* Brand Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <Link href="/" className="flex items-center gap-3 mb-5 group">
-              <div className="flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] bg-ivory/10 border border-ivory/15 transition-transform duration-300 group-hover:scale-105">
-                <svg
-                  viewBox="0 0 36 40"
-                  fill="none"
-                  className="h-6 w-6"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M18 2L4 8v11c0 9.5 6 16.8 14 19 8-2.2 14-9.5 14-19V8L18 2z"
-                    stroke="#A66D48"
-                    strokeWidth="2.2"
-                    fill="rgba(166, 109, 72, 0.12)"
-                  />
-                  <path
-                    d="M11 23l5-5 4 3.5 6-7.5M26 14h-4.5M26 14v4.5"
-                    stroke="#F5F0E6"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-
-              <div className="flex items-baseline gap-1 font-heading text-base font-bold tracking-wide">
-                <span className="text-ivory">{FOOTER_DATA.brand.nameFirst}</span>
-                <span className="text-copper">{FOOTER_DATA.brand.nameSecond}</span>
-              </div>
-            </Link>
+            <Link href="/" className="flex w-50 h-10 relative items-center mb-5 gap-3 shrink-0 group">
+            <div className="">
+                <Image
+            src="/images/ServiceMarqueLogo.png"
+            fill
+            alt="Service Marque Logo"
+             style={{
+    filter: `
+      drop-shadow(0.0001px 0 0 white)
+      drop-shadow(-0.0001px 0 0 white)
+    `,
+  }}/>  
+            </div>
+          </Link>
 
             <p className="font-arabic text-xs sm:text-sm text-ivory/75 leading-relaxed max-w-sm">
               {FOOTER_DATA.brand.description}

@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { SlidersHorizontal, ArrowLeft, X } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import Image from 'next/image'
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -51,33 +52,13 @@ export default function Header() {
       >
         <div className="container-luxury flex h-20 items-center justify-between gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0 group">
-            <div className="flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] bg-forest text-ivory transition-transform duration-300 group-hover:scale-105">
-              <svg viewBox="0 0 36 40" fill="none" className="h-6 w-6" aria-hidden="true">
-                <path
-                  d="M18 2L4 8v11c0 9.5 6 16.8 14 19 8-2.2 14-9.5 14-19V8L18 2z"
-                  stroke="#A66D48"
-                  strokeWidth="2.2"
-                  fill="rgba(166, 109, 72, 0.12)"
-                />
-                <path
-                  d="M11 23l5-5 4 3.5 6-7.5M26 14h-4.5M26 14v4.5"
-                  stroke="#F5F0E6"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            <div className="flex flex-col leading-tight">
-              <div className="flex items-baseline gap-1 font-heading text-sm font-bold tracking-wide">
-                <span className="text-forest">SERVICE</span>
-                <span className="text-copper">MARQUE</span>
-              </div>
-              <span className="font-arabic text-[11px] text-muted">
-                بسّط عملية إيداع علامتك التجارية بالمغرب
-              </span>
+          <Link href="/" className="flex w-50 h-10 relative items-center gap-3 shrink-0 group">
+            <div className="">
+                <Image
+            src="/images/ServiceMarqueLogo.png"
+            fill
+            alt="Service Marque Logo"
+             />  
             </div>
           </Link>
 

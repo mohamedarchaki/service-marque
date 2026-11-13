@@ -1,27 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "motion/react";
-import { Search, ShieldCheck, ArrowLeft, Sparkles } from "lucide-react";
+import { motion } from "motion/react";
+import { ArrowLeft, ArrowUpLeft, Sparkles } from "lucide-react";
 import { MARQUES_DATA } from "@/data/marques";
 import PageBanner from "@/components/PageBanner";
 
 export default function MarquesPage() {
-  const { hero, categories, items, cta } = MARQUES_DATA;
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const filteredItems = items.filter((item) => {
-    const matchesCategory =
-      activeCategory === "all" || item.category === activeCategory;
-    const q = searchQuery.trim().toLowerCase();
-    const matchesSearch =
-      !q ||
-      item.name.toLowerCase().includes(q) ||
-      item.industry.toLowerCase().includes(q);
-    return matchesCategory && matchesSearch;
-  });
+  const { hero, items, cta } = MARQUES_DATA;
 
   return (
     <main dir="rtl" className="bg-ivory selection:bg-forest selection:text-ivory">
@@ -32,94 +18,50 @@ export default function MarquesPage() {
         currentPage="العلامات المسجلة"
       />
 
+      {/* Full-Logo Gallery Grid */}
       <section className="section-padding">
-        <div className="container-luxury max-w-5xl">
-          {/* Search + Category Filter */}
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-10 bg-white border border-border p-4 rounded-[var(--radius-xl)] shadow-[var(--shadow-soft)]">
-            <div className="relative w-full md:max-w-xs">
-              <Search className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="بحث باسم العلامة أو القطاع..."
-                className="input-luxury !pr-11 !py-2.5 !rounded-full text-sm"
-              />
-            </div>
+        <div className="container-luxury max-w-6xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+            {items.map((item, idx) => (
+              <motion.a
+                key={item.id}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.45, delay: idx * 0.06 }}
+                className="group relative overflow-hidden rounded-[var(--radius-xl)] bg-white border border-border shadow-[var(--shadow-soft)] hover:border-copper/60 hover:shadow-[var(--shadow-card)] transition-all duration-300 flex flex-col"
+              >
+                {/* Large Logo Showcase */}
+                <div className="relative aspect-[4/3.5] w-full bg-ivory/60 flex items-center justify-center p-10 overflow-hidden">
+                  {item.logoUrl ? (
+                    <img
+                      src={item.logoUrl}
+                      alt={item.name}
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span className="font-display text-5xl font-bold tracking-widest text-forest/80 group-hover:text-copper transition-colors">
+                      {item.logoType}
+                    </span>
+                  )}
 
-            <div className="flex flex-wrap items-center gap-1.5 w-full md:w-auto justify-start md:justify-end">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  type="button"
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`rounded-full px-4 py-2 font-heading text-[11px] font-semibold transition-all ${
-                    activeCategory === cat.id
-                      ? "bg-forest text-ivory shadow-sm"
-                      : "bg-ivory text-forest border border-border hover:border-copper/50"
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
+                  <span className="absolute top-4 left-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 border border-border text-forest shadow-sm transition-all duration-300 group-hover:bg-forest group-hover:text-ivory group-hover:border-forest">
+                    <ArrowUpLeft className="h-4 w-4" />
+                  </span>
+                </div>
+
+                {/* Brand Name */}
+                <div className="border-t border-border/70 bg-white px-6 py-4 text-center">
+                  <h2 className="font-heading text-base font-bold tracking-wide text-forest group-hover:text-copper transition-colors">
+                    {item.name}
+                  </h2>
+                </div>
+              </motion.a>
+            ))}
           </div>
-
-          {/* Brands Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <AnimatePresence mode="popLayout">
-              {filteredItems.map((item, idx) => (
-                <motion.div
-                  key={item.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.35, delay: idx * 0.03 }}
-                  className="group rounded-[var(--radius-lg)] bg-white border border-border p-6 shadow-[var(--shadow-soft)] hover:border-copper/60 hover:shadow-[var(--shadow-card)] transition-all duration-300 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-5">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-[var(--radius-md)] bg-forest text-copper font-heading text-base font-bold tracking-wide group-hover:bg-copper group-hover:text-ivory transition-colors duration-300 overflow-hidden">
-                        {item.logoUrl ? (
-                          <img
-                            src={item.logoUrl}
-                            alt={item.name}
-                            className="h-full w-full object-cover"
-                          />
-                        ) : (
-                          item.logoType
-                        )}
-                      </div>
-
-                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 border border-emerald-500/15 px-3 py-1 font-heading text-[10px] font-bold text-emerald-700">
-                        <ShieldCheck className="h-3.5 w-3.5" />
-                        {item.status}
-                      </span>
-                    </div>
-
-                    <h3 className="font-display text-xl font-bold text-forest mb-1 group-hover:text-copper transition-colors">
-                      {item.name}
-                    </h3>
-                    <p className="font-arabic text-xs text-muted leading-relaxed">
-                      {item.industry}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-
-          {filteredItems.length === 0 && (
-            <div className="rounded-[var(--radius-lg)] bg-white border border-border p-12 text-center shadow-sm">
-              <p className="font-display text-xl font-bold text-forest mb-1">
-                لا توجد نتائج مطابقة
-              </p>
-              <p className="font-arabic text-sm text-muted">
-                تواصل معنا لمعرفة ما إذا كان الاسم الذي تبحث عنه متاحاً للتسجيل.
-              </p>
-            </div>
-          )}
         </div>
       </section>
 
@@ -132,7 +74,7 @@ export default function MarquesPage() {
             <div className="relative z-10 max-w-2xl mx-auto">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-copper/40 bg-copper/15 px-4 py-1.5 font-heading text-xs text-copper mb-5">
                 <Sparkles className="h-3.5 w-3.5" />
-                <span>تأكيد الإتاحة خلال ساعات</span>
+                <span>حماية رسمية 100%</span>
               </span>
 
               <h2 className="heading-display text-3xl sm:text-4xl font-bold text-ivory mb-4">
